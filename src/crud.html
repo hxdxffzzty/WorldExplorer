@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Explorer</title>
+    <link rel="stylesheet" href="crud.css" />
+</head>
+
+<body>
+    <div class="mainWrapper">
+        <h1>World Explorer 🌏</h1>
+        <p><strong>World Explorer CRUD 📝<3</strong></p>
+
+        <form>
+            <div class="container">
+                <h2>Itinerary / Important Info</h2>
+                <input type="text" id="fileName" placeholder="Title" />
+                <textarea id="fileContents"></textarea>
+                <div class="button-group">
+                    <button id="btnCreate" class="btn">Create</button>
+                    <button id="btnRead" class="btn">Read</button>
+                    <button id="btnUpdate" class="btn">Update</button>
+                    <button id="btnDelete" class="btn">Delete</button>
+                </div>
+                <div class="homepage-button-wrapper">
+                    <a href="index.html" class="btn homepage-button">HOMEPAGE</a>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script src="crud.js"></script>
+</body>
+</html>

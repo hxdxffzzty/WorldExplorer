@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Explorer</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="main-content">
+        <header><h1>World Explorer 🌏</h1></header>
+        <img src="assets/world.png" alt="World image homepage" width="900" height="450">
+        <p><strong>Welcome to the World Explorer application <3</strong></p>
+        <input type="text" id="country_input" placeholder="Enter country">
+        <button onclick="buttonClicked()">Get Country Info</button>
+
+        <p><strong>Country Details :</strong> </p>
+        <p id="demo1"></p>
+        <p id="demo2"></p>
+      </div>
+
+      <button class="crud-button"><a href="crud.html">Go to Crud</a></button>
+      
+      <div class="top-countries">
+        <h2>Most searched Countries</h2>
+        <div class="country-list">
+            <a href="country.html?country=United States" class="country-card">
+                <img src="assets/us.png" alt="United States" width="300" height="150">
+                <p>United States</p>
+            </a>
+            <a href="country.html?country=China" class="country-card">
+                <img src="assets/taiwan.png" alt="China" width="300" height="150">
+                <p>Taiwan</p>
+            </a>
+            <a href="country.html?country=Spain" class="country-card">
+                <img src="assets/spain.png" alt="Spain" width="300" height="150">
+                <p>Spain</p>
+            </a>
+        </div>
+    </div>
+    
+          
+    </div>
+  
+    <script src="index.js"></script>
+  </body>
+</html>

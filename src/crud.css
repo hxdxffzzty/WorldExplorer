@@ -1,0 +1,122 @@
+ 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  max-width: 38rem;  
+  padding: 2rem;
+  margin: auto;  
+  background-color: #f0f8ff;  
+  color: #333; 
+  line-height: 1.6; 
+}
+
+h1 {
+  text-align: center;  
+  font-size: 2rem;  
+  color: #2c3e50;  
+  margin-bottom: 1rem; 
+}
+
+h2 {
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
+.mainWrapper {
+  background-color: #ffffff;  
+  border-radius: 8px;  
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);  
+  padding: 20px;  
+}
+
+input[type="text"],
+textarea {
+  width: 100%;  
+  padding: 0.5rem; 
+  font-size: 1rem;  
+  border: 1px solid #ccc;  
+  border-radius: 4px;  
+  margin-bottom: 1rem;  
+  outline: none; 
+}
+
+input[type="text"]:focus {
+  border-color: #3498db;  
+}
+
+textarea {
+  resize: vertical; 
+}
+
+button {
+  padding: 0.5rem 1rem;  
+  font-size: 1rem;  
+  color: #fff;  
+  background-color: #3498db; 
+  border: none;  
+  border-radius: 4px;  
+  cursor: pointer;  
+  transition: background-color 0.3s;  
+  margin: 5px;  
+  justify-content: center;
+}
+
+button:hover {
+  background-color: #2980b9; 
+}
+
+button:focus {
+  outline: 2px solid #007bff;  
+}
+
+.container {
+  display: flex;  
+  flex-direction: column;  
+  justify-content: space-between;  
+  height: 100%;  
+}
+
+.main-content {
+  flex-grow: 1;  
+}
+
+.crud-button {
+  display: flex;  
+  justify-content: center;  
+  margin-top: 1rem; 
+}
+
+#demo1, #demo2 {
+  margin-top: 1rem;  
+  padding: 1rem;  
+  background-color: #e8f4fa;  
+  border: 1px solid #3498db;  
+  border-radius: 5px;  
+  font-size: 1.1rem;  
+}
+
+#demo2 img {
+  display: block; 
+  margin: 0.5rem auto; 
+  border-radius: 4px; 
+  max-width: 100px; 
+}
+
+.error-message {
+  color: red;  
+  font-weight: bold; 
+  margin-top: 1rem;  
+}
+
+.homepage-button-wrapper {
+  display: flex;  
+  justify-content: center;  
+  margin-top: 20px; 
+  margin-bottom: 10px;
+}
+

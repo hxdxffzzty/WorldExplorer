@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country Details</title>
+    <link rel="stylesheet" href="country.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 id="country-name">Country Name</h1>
+            <img id="country-flag" alt="Country Flag" width="200">
+        </header>
+        <section id="country-info">
+            <h2>Country Information</h2>
+            <p id="capital"></p>
+            <p id="area"></p>
+            <p id="population"></p>
+            <p id="languages"></p>
+            <p id="currency"></p>
+        </section>
+        <div class="homepage-button-wrapper"></div>
+        <a href="index.html">Go back to homepage</a>
+    </div>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const countryName = params.get('country');
+
+        if (countryName) {
+            fetch('https://restcountries.com/v3.1/name/' + countryName)
+                .then(response => response.json())
+                .then(data => {
+                    const countryData = data[0];
+                    document.getElementById('country-name').innerText = countryData.name.common;
+                    document.getElementById('country-flag').src = countryData.flags.svg;
+
+                    document.getElementById('capital').innerHTML = `<strong>Capital:</strong> ${countryData.capital ? countryData.capital[0] : 'N/A'}`;
+                    document.getElementById('area').innerHTML = `<strong>Area:</strong> ${countryData.area.toLocaleString()} km²`;
+                    document.getElementById('population').innerHTML = `<strong>Population:</strong> ${countryData.population.toLocaleString()}`;
+                    document.getElementById('languages').innerHTML = `<strong>Languages:</strong> ${countryData.languages ? Object.values(countryData.languages).join(', ') : 'N/A'}`;
+                    document.getElementById('currency').innerHTML = `<strong>Currency:</strong> ${countryData.currencies ? Object.values(countryData.currencies).map(currency => currency.name).join(', ') : 'N/A'}`;
+                })
+                .catch(error => {
+                    console.error('Error fetching country data:', error);
+                    alert('Error fetching country data. Please try again later.');
+                });
+        } else {
+            alert('No country specified.');
+        }
+    </script>
+</body>
+</html>
